@@ -10,3 +10,4 @@ The main issue here is that the fake news mainly spreads in social media such as
 *   The number of tweets is large, which requires the tweet collection and labeling process to be fast.
 *   The topics of tweets are messy and changing swiftly.
 ![Alt Text](https://github.com/jiayi42/minimal/blob/master/assets/img/JanFeb.gif)
+We do not ring the words as we cannot recognize any obvious topics in LDA topic models in our labeled tweets data.
