@@ -4,3 +4,4 @@ description: This is a Fake News Analytics for Tweets in Real Time course
 show_downloads: False
 google_analytics:
 theme: jekyll-theme-minimal
+markdown: GFM
