@@ -1,6 +1,6 @@
 # COVID Fake News Data Is Always Drifting
 
-<img src="https://github.com/jiayi42/minimal/blob/master/assets/img/2_11.gif">
+![Alt Text](https://media0.giphy.com/media/lTJK46k4l4kL4wBDEg/giphy.gif)
 
 The above gif shows the changing wordclouds of the keywords in LDA topic models from 2020 Feb. to 2020 Nov from COVID related articles thefactcheck website. 
 We ring the words which indeeds show the hot topics at that moment.
@@ -12,6 +12,6 @@ The main issue here is that the fake news mainly spreads in social media such as
 *   The number of tweets is large, which requires the tweet collection and labeling process to be fast.
 *   The topics of tweets are messy and changing swiftly.
  
-<img src="https://github.com/jiayi42/minimal/blob/master/assets/img/JanFeb.gif">
+![Alt Text](https://media2.giphy.com/media/v1AJSl8f7ZJG14Cz1W/giphy.gif)
 
 We do not ring the words as we cannot recognize any obvious topics in LDA topic models in our labeled tweets data.
