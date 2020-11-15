@@ -99,3 +99,6 @@ The following figure is our typical labeling process, which shows that we can ju
 Next, we can start to analyze our data and start deploying our machine learning models.
 
 ### The imbalance data and machine learning model in fake news detection
+
+<img src="assets/img/data_distribution.JPG" />
+
