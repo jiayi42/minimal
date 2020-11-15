@@ -61,3 +61,39 @@ After we complete all these steps, we convert the text to lowercase and refine t
 "wtf is boosie? is that like the slime left behind a snail? not a fungus but not alive? not coronavirus. you ll get it."
 ``` 
 
+### COVID Tweet Collection and Efficient Corroborative Labeling Process
+
+#### COVID Tweet Collection
+
+The COVID Tweet data collection is done by TA. We still LDA models to find COVID realted three topics 150 keywords from the fact check websites. These keywords can be as our filters to the unrelated tweets without any of the keywords. 
+
+'''
+ballot funding drug mail voter ad police voting fund budget tax nursing vote chloroquine hydroxychloroquine poll footage inmate payment dollar relief man prison support crime financial officer debt option faith muslim spending violence title million application package revenue payroll private proposal cut letter lawmaker stimulus enforcement safety increase polling legislation insurance unemployment white age county benefit employee healthy job student coverage outside colored payment essential hotel protection loan restaurant income adult layer color church cost food legal store kid mandate percent young covering wearer particle self short eviction gathering learning requirement center instruction attention room release leave cloth employer brain chinese lab travel cremation man clip alive lockdown ventilator funeral fatality mortality product supply bag woman quarantine british animal estimate message cause certificate equipment threat average capacity common droplet screenshot special influenza viral fear infected count outlet severe air bed factor site sign reporter billionaire daily body victim plastic fever
+'''
+
+Then, we can focus on corroborative labeling process.
+
+#### Efficient Corroborative Labeling Process
+
+Even we have done tweet data leaning. The number of left tweets is large. The main tweets are thousands to tensands per hour after data cleaning.  The tweet texts are usually short and their context are messy. Thus, efficient corroborative labeling process is important. 
+
+For efficiency, we assume that we can ramdom sample one of tenth tweets if our corroborative labeling process is strict and reliable. We can use part of the data to present the overall data. If the 10% data is insufficient (under 2500 tweets), we will random pick more data until we get 250 tweets. Thus, we send them into corroborative labeling process and accelerate the labeling process.
+
+**The main spirit of the LITMUS standard project is to find a corroborative labeling process to labeling covid fake news**
+
+**No high quality data we have; no good models we obtain**
+
+Here, we introduce [Fact Check Tools API](https://developers.google.com/fact-check/tools/api). This API can let us check truth of the text by offering the evidence from fact check websites. 
+
+You may think that we do not need to do our project as this api can replace our goals. However, this API seldom (under 5%) find the sources to verify the tweets. Even we use some sentence segmentation skills to check each sentence in a tweet. We can get about 10% tweets. That's why we need to build models to detect fake news when the API cannot find the sources.
+
+**We get the average truth score of every tweet after we use some sentence segmentation skills to check each sentence in it.**
+We get 1 point for each fake setence and get -1 point for each true sentence. We get 0 point for each unverified sentence or bad request from the API. In this way, we can use 0 as our threshold to define the truth of a tweet (positive: fake, negative:true, zero:discard).
+
+The API will respond the verification results in 1~2 second per request. The labeling speed may not be enough to keep up with the upcoming data even if we do sampling and filtering.
+**To accelerate the labeling process, we use multiprocessing pool with 4 processors. We will get bad requests from the API very often if we use more processors.**
+
+The following figure is our typical labeling process, which shows that we can jus spend 916.88 seconds processing 1428 tweets and get 131 tweets' label.
+![Alt Text](https://github.com/jiayi42/minimal/blob/gh-pages/assets/img/labeling.png)
+
+
