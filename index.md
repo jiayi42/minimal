@@ -91,6 +91,7 @@ You may think that we do not need to do our project as this api can replace our 
 We get 1 point for each fake setence and get -1 point for each true sentence. We get 0 point for each unverified sentence or bad request from the API. In this way, we can use 0 as our threshold to define the truth of a tweet (positive: fake, negative:true, zero:discard).
 
 The API will respond the verification results in 1~2 second per request. The labeling speed may not be enough to keep up with the upcoming data even if we do sampling and filtering.
+
 **To accelerate the labeling process, we use multiprocessing pool with 4 processors. We will get bad requests from the API very often if we use more processors.**
 
 The following figure is our typical labeling process, which shows that we can jus spend 916.88 seconds processing 1428 tweets and get 131 tweets' label.
@@ -101,4 +102,10 @@ Next, we can start to analyze our data and start deploying our machine learning 
 ### The imbalance data and machine learning model in fake news detection
 
 <img src="assets/img/data_distribution.JPG" />
+The above figure shows the number of fake news is always larger than true news in twitter in each period (3 days as one and we adjust it due to the start and end of months) from 1.21 to 2.29. 
 
+This trend is not surprising as the true news are not the main target that fake check website check. The true news are labeled as they should avoid being recognized as fake news. Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work. Now, we pay attention to the machine learning model we adopt for labeled news by Google API.
+
+### The Machine Learning Models
+
+As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can.
