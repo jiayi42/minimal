@@ -102,9 +102,10 @@ Next, we can start to analyze our data and start deploying our machine learning 
 ### The imbalance data and machine learning model in fake news detection
 
 <img src="assets/img/data_distribution.JPG" />
-The above figure shows the number of fake news is always larger than true news in twitter in each period (3 days as one and we adjust it due to the start and end of months) from 1.21 to 2.29. 
 
-This trend is not surprising as the true news are not the main target that fake check website check. The true news are labeled as they should avoid being recognized as fake news. Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work. Now, we pay attention to the machine learning model we adopt for labeled news by Google API.
+The above figure shows **the number of fake news is always larger than true news** in twitter in each period (3 days as one and we adjust it due to the start and end of months) from 1.21 to 2.29. 
+
+**This trend is not surprising as the true news are not the main target that fake check website check.** The true news are labeled as they should avoid being recognized as fake news. Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work. Now, we pay attention to the machine learning model we adopt for labeled news by Google API.
 
 ### The Machine Learning Models
 
