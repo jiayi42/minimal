@@ -35,6 +35,7 @@ We do not ring the words as we cannot recognize any obvious topics in LDA topic 
 The raw tweets are not clear at all.
 
 ```
+"😜 🤪 🤨 🧐 Coronaviris"
 "RT @SKenson: As a gay man who came of age during the AIDS era of the 1980s, I\u2019m intensely curious for you, a Republican Senator, to tell me\u2026"
 "@welt @kuku27 Jens Spahn: \"We took the corona virus very seriously from day one\"
 "Hans de Boer (VNO-NCW): corona hakt fors in op economie | NOS https://t.co/zBTS0fRDSm"
