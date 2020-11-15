@@ -110,3 +110,13 @@ The above figure shows **the number of fake news is always larger than true news
 ### The Machine Learning Models
 
 As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can.
+
+<img src="assets/img/RNN.PNG" />
+
+<img src="assets/img/CNN.PNG" />
+
+<img src="assets/img/Ranger.PNG" />
+
+<img src="assets/img/average_timeshift.PNG" />
+
+<img src="assets/img/each_time_shift.PNG" />
