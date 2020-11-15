@@ -94,6 +94,5 @@ The API will respond the verification results in 1~2 second per request. The lab
 **To accelerate the labeling process, we use multiprocessing pool with 4 processors. We will get bad requests from the API very often if we use more processors.**
 
 The following figure is our typical labeling process, which shows that we can jus spend 916.88 seconds processing 1428 tweets and get 131 tweets' label.
-![Alt Text](https://github.com/jiayi42/minimal/blob/gh-pages/assets/img/labeling.png)
-
+<img src="assets/img/labeling.png" />
 
