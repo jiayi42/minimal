@@ -67,9 +67,9 @@ After we complete all these steps, we convert the text to lowercase and refine t
 
 The COVID Tweet data collection is done by TA. We still LDA models to find COVID realted three topics 150 keywords from the fact check websites. These keywords can be as our filters to the unrelated tweets without any of the keywords. 
 
-'''
+```
 ballot funding drug mail voter ad police voting fund budget tax nursing vote chloroquine hydroxychloroquine poll footage inmate payment dollar relief man prison support crime financial officer debt option faith muslim spending violence title million application package revenue payroll private proposal cut letter lawmaker stimulus enforcement safety increase polling legislation insurance unemployment white age county benefit employee healthy job student coverage outside colored payment essential hotel protection loan restaurant income adult layer color church cost food legal store kid mandate percent young covering wearer particle self short eviction gathering learning requirement center instruction attention room release leave cloth employer brain chinese lab travel cremation man clip alive lockdown ventilator funeral fatality mortality product supply bag woman quarantine british animal estimate message cause certificate equipment threat average capacity common droplet screenshot special influenza viral fear infected count outlet severe air bed factor site sign reporter billionaire daily body victim plastic fever
-'''
+```
 
 Then, we can focus on corroborative labeling process.
 
@@ -96,3 +96,6 @@ The API will respond the verification results in 1~2 second per request. The lab
 The following figure is our typical labeling process, which shows that we can jus spend 916.88 seconds processing 1428 tweets and get 131 tweets' label.
 <img src="assets/img/labeling.png" />
 
+Next, we can start to analyze our data and start deploying our machine learning models.
+
+### The imbalance data and machine learning model in fake news detection
