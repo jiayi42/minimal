@@ -118,7 +118,11 @@ We leverage support vector machine (SVM) and random forest (RF) as our tradition
 
 **Here are traditional learning model hyperparameters and SMOTE sampling methods (desribed in later sections)**
 
+**SVM**
+
 <img src="assets/img/SVM_SMOTE.PNG" />
+
+**RF**
 
 <img src="assets/img/RF_SMOTE.PNG" />
 
@@ -128,7 +132,11 @@ We also adopt a long short time memory, an artificial recurrent neural network (
 
 **Here are deep learning model architectures and their corresponding number of parameters**
 
+**RNN**
+
 <img src="assets/img/RNN.PNG" />
+
+**CNN**
 
 <img src="assets/img/CNN.PNG" />
 
@@ -148,9 +156,11 @@ The following figure is a good explanation of SMOTE.
 #### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
 Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
 
-The following figure is the performance of Ranger.
+The following figure is the performance of Ranger from Lookahead paper.
 <img src="assets/img/Ranger.PNG" />
 
+
+### Our performance results
 <img src="assets/img/average_timeshift.PNG" />
 
 <img src="assets/img/each_time_shift.PNG" />
