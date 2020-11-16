@@ -105,16 +105,50 @@ Next, we can start to analyze our data and start deploying our machine learning 
 
 The above figure shows **the number of fake news is always larger than true news** in twitter in each period (3 days as one and we adjust it due to the start and end of months) from 1.21 to 2.29. 
 
-**This trend is not surprising as the true news are not the main target that fake check websites check. These websites primarily fight against the spreads of fake news. The true news are labeled as they should avoid being recognized as fake news.** Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work. Now, we pay attention to the machine learning models we adopt for labeled news by Google API.
+**This trend is not surprising as the true news are not the main target that fake check websites check. These websites primarily fight against the spreads of fake news. The true news are labeled as they should avoid being recognized as fake news.** Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work.  **Now, we pay attention to the machine learning models. We should adopt some strategies to make the models to not just guess the majority class (fake news).**
 
 ### The Machine Learning Models
 
-As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can.
+As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can. 
+**We demonstrate our found reasonable architectures of our models and do not change it in our experiments.**
+
+####  Traditional Machine Learning Models
+
+We leverage support vector machine (SVM) and random forest (RF) as our traditional machine learning models, which are based on general decision boundaries.
+
+**Here are traditional learning model hyperparameters and SMOTE sampling methods (desribed in later sections)**
+
+<img src="assets/img/SVM_SMOTE.PNG" />
+
+<img src="assets/img/RF_SMOTE.PNG" />
+
+#### Deep Learning Model
+
+We also adopt a long short time memory, an artificial recurrent neural network (RNN) architecture, and a one-dimension convulution nerual network (CNN) as our deep learning models, which are based on general decision boundaries.
+
+**Here are deep learning model architectures and their corresponding number of parameters**
 
 <img src="assets/img/RNN.PNG" />
 
 <img src="assets/img/CNN.PNG" />
 
+
+
+**To achieve this goal, we have two strategies. **
+
+1. We sample data to balance the distribution in a reasonable way before we train the traditional machine learning models on them.
+2. We should optimize the deep learning models with "memory". That is, our optimizer should lookahead the previous optimizing steps to better plan the future optimization. In doing so, the model can avoid overfit local data distribution in some optimization steps. 
+
+#### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
+Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
+
+The following figure is a good explanation of SMOTE.
+<img src="assets/img/SMOTE.PNG" />
+
+#### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
+Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
+
+The following figure is the performance of Ranger.
 <img src="assets/img/Ranger.PNG" />
 
 <img src="assets/img/average_timeshift.PNG" />
