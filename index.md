@@ -149,16 +149,16 @@ We also adopt a long short time memory, an artificial recurrent neural network (
 1. We sample data to balance the distribution in a reasonable way before we train the traditional machine learning models on them.
 2. We should optimize the deep learning models with "memory". That is, our optimizer should lookahead the previous optimizing steps to better plan the future optimization. In doing so, the model can avoid overfit local data distribution in some optimization steps. 
 
-#### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
+#### Oversampling Data: SMOTE: Synthetic Minority Over-sampling Technique.
 Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
 
 The following figure is a good explanation of SMOTE.
 <img src="assets/img/SMOTE.png" />
 
-#### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
-Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
+#### New Deep Learning Optimizer, Ranger: Synergistic combination of RAdam + LookAhead for the best of both.
+RAdam (Rectified Adam) and LookAhead are two different approaches to optimize deep learning models. RAdam adopts a dynamic rectifier based on the previous variance to adjust momentum of Adam optimizaer. Its automatic warm-up strategies ensures a solid start to training based on its training dataset. LookAhead provides a robust and stable exploration by memorizing previous optimization steps during the entirety of training.
 
-The following figure is the performance of Ranger from Lookahead paper.
+The following figure is the performance of lookahead methods from Lookahead paper.  
 <img src="assets/img/Ranger.PNG" />
 
 
