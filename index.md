@@ -1,5 +1,5 @@
 # A COVID Fake News War
-## COVID Fake News Data Is Always Drifting
+*   ## COVID Fake News Data Is Always Drifting
 
 Although many people read news online in social media nowaday, many people do not know they are under attack of fake news.
 
