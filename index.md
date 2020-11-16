@@ -110,7 +110,7 @@ The above figure shows **the number of fake news is always larger than true news
 ### The Machine Learning Models
 
 As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can. 
-**We demonstrate our found reasonable architectures of our models and do not change it in our experiments.**
+**We demonstrate our found reasonable architectures of our models and do not change it in our experiments. In doing so, this unchanged architectures let our model deployment will be more automatically. They just needs to be efficiently trained on new data periodically**
 
 ####  Traditional Machine Learning Models
 
