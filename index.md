@@ -134,7 +134,7 @@ We also adopt a long short time memory, an artificial recurrent neural network (
 
 
 
-**To achieve this goal, we have two strategies. **
+**To achieve this goal, we have two strategies.**
 
 1. We sample data to balance the distribution in a reasonable way before we train the traditional machine learning models on them.
 2. We should optimize the deep learning models with "memory". That is, our optimizer should lookahead the previous optimizing steps to better plan the future optimization. In doing so, the model can avoid overfit local data distribution in some optimization steps. 
@@ -143,7 +143,7 @@ We also adopt a long short time memory, an artificial recurrent neural network (
 Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
 
 The following figure is a good explanation of SMOTE.
-<img src="assets/img/SMOTE.PNG" />
+<img src="assets/img/SMOTE.png" />
 
 #### sampling data: SMOTE: Synthetic Minority Over-sampling Technique.
 Nitesh V. Chawla  proposed SMOTE: Synthetic Minority Over-sampling Technique, which help us synthesize the reasonable new data points among the minority class (true news) data points. In this way, we can balance the distribution a little bit. We adopt the methods for support vector machine and random forest as these models more tend to find the general decision boundaries in feature space than deep learning models.
