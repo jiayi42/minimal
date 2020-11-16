@@ -112,7 +112,7 @@ The above figure shows **the number of fake news is always larger than true news
 **This trend is not surprising as the true news are not the main target that fake check websites check. These websites primarily fight against the spreads of fake news. The true news are labeled as they should avoid being recognized as fake news.** Other personal tweets are not important in the war between true news or fake news. However, we may needs to develop a model to detect whether a tweet is controversial. That is, we need to decide whether a tweet is just a personal daily tweet outside the fake news war. The user may use our service to decide whether his or her friends' personal tweets are true or not. We should stop them to do this. However, how to automatically label personal daily tweets will be another big challenge; thus, we put it in the future work.  **Now, we pay attention to the machine learning models. We should adopt some strategies to make the models to not just guess the majority class (fake news).**
  
 As a result, our task is to recognize fake news while to avoid mistaking true one as fake one as much as we can. 
-**We demonstrate our found reasonable architectures of our models and do not change it in our experiments. In doing so, this unchanged architectures let our model deployment will be more automatically. They just needs to be efficiently trained on new data periodically**
+**We demonstrate our found reasonable architectures of our models and do not change them in our experiments. In doing so, the unchanged architectures let our model deployment will be more automatically. They just need to be efficiently trained on new data periodically to detect faje bews**
 
 ####  Traditional Machine Learning Models
 
@@ -130,7 +130,7 @@ We leverage support vector machine (SVM) and random forest (RF) as our tradition
 
 #### Deep Learning Model
 
-We also adopt a long short time memory, an artificial recurrent neural network (RNN) architecture, and a one-dimension convulution nerual network (CNN) as our deep learning models, which are based on general decision boundaries.
+We also adopt a long short time memory, an artificial recurrent neural network (RNN) architecture, and a one-dimension convulution nerual network (CNN) as our deep learning models, which are common natural language procession models for fake news detection.
 
 **Here are deep learning model architectures and their corresponding number of parameters**
 
