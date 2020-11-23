@@ -142,8 +142,6 @@ We also adopt a long short time memory, an artificial recurrent neural network (
 
 <img src="assets/img/CNN.PNG" />
 
-
-
 **To achieve this goal, we have two strategies.**
 
 1. We sample data to balance the distribution in a reasonable way before we train the traditional machine learning models on them.
@@ -161,8 +159,35 @@ RAdam (Rectified Adam) and LookAhead are two different approaches to optimize de
 The following figure is the performance of lookahead methods from Lookahead paper.  
 <img src="assets/img/Ranger.PNG" />
 
+#### Other Strategies for imbalance data: ratio-based class weight tuning.
+For deep learning models, we will change the class weight, this method can force deep learning model to focus less on smaller weight class. 
+They are based on the following rules:
+*   If the ratio between fake and true news in training data is  fewer than 5, the two class weight will not change (1:1).
+*   If the ratio between fake and true news in training data is more than 5 and fewer than 10, the fake news class weight will be 20%.
+*   If the ratio between fake and true news in training data is more  than 10, the fake news weight will be 10%.
+
+
 
 ### Our performance results
-<img src="assets/img/average_timeshift.PNG" />
 
+#### average accuracy for later 4 testing periods for each training period
+<img src="assets/img/AVG_Time_accuracy.jpg" />
+
+#### Time shift fake news detection evaluation (accuracy ) 
 <img src="assets/img/each_time_shift_new.PNG" />
+
+<img src="assets/img/more_time_shift.jpg" />
+
+#### See Model Behavior by Confusion Matrix 
+<img src="assets/img/confusion.jpg" />
+
+
+## Conclusion
+
+*   The prediction results can achieve a reasonable performance. However, the imbalance data problem is partially but not totally solved. 
+*   We have different models to do voting and they can be mutually evaluated to prove the effectiveness of our approach.
+*   In the future work, we may need an automated way to delete personal daily tweet. Thus, our system can avoid them and be more practical.
+
+ 
+
+
