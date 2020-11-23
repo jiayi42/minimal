@@ -105,7 +105,7 @@ Next, we can start to analyze our data and start deploying our machine learning 
 
 we need to deal with the imbalance lableled data before we deploy our machine learning models.
 
-<img src="assets/img/data_distribution.JPG" />
+<img src="assets/img/data_distribution.PNG" />
 
 The above figure shows **the number of fake news is always larger than true news** in twitter in each period (3 days as one and we adjust it due to the start and end of months) from 1.21 to 2.29. 
 
@@ -165,4 +165,4 @@ The following figure is the performance of lookahead methods from Lookahead pape
 ### Our performance results
 <img src="assets/img/average_timeshift.PNG" />
 
-<img src="assets/img/each_time_shift.PNG" />
+<img src="assets/img/each_time_shift_new.PNG" />
