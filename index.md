@@ -170,15 +170,21 @@ They are based on the following rules:
 
 ### Our performance results
 
-#### average accuracy for later 4 testing periods for each training period
-<img src="assets/img/AVG_Time_accuracy.jpg" />
-
 #### Time shift fake news detection evaluation (accuracy ) 
+To verify the robustness of our model, we train our model on each new period (3 days in general) and test it for later 4 period. We find our model performance changing a little most of the time.
+
 <img src="assets/img/each_time_shift_new.PNG" />
 
 <img src="assets/img/more_time_shift.jpg" />
 
+#### average accuracy for later 4 testing periods for each training period
+To better see the overall trend of our models, we use average accuracy for later 4 testing periods for each training period. We can see that our models are stable in general. The best model usually is CNN+Ranger model. RNN+Ranger model occasionally can outperform it, yet it is more unstable. It may not be suitable for tweet style context which is short. Thus, Long and short time memory architecture cannot merit its own memory mechanism.
+
+<img src="assets/img/AVG_Time_accuracy.jpg" />
+
 #### See Model Behavior by Confusion Matrix 
+Confusion Matrix reports the number of false positives, false negatives, true positives, and true negatives in our fake news detection. We can leverage it to observe the model and detection whether our model just predict the majority class data. Here is fake news. In most of cases, we can cure this problem through our general machine learning model deployment.
+
 <img src="assets/img/confusion.jpg" />
 
 
