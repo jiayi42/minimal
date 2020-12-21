@@ -8,5 +8,5 @@ Please see the following link to see the story.\
 https://jiayi42.github.io/minimal/
 
 # Application
-Please see the following link to enjoy the code.
+Please see the following link to enjoy the code.\
 https://github.com/jiayi42/Detect_COVID19_Fake_News_in_Twitter
